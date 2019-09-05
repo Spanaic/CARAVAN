@@ -47,9 +47,15 @@ class BlogsController < ApplicationController
     # blogs_pathはshow.htme.erbの名前付きルート
   end
 
-  # def destroy
-  #   redirect_to blogs_path
-  # end
+  def destroy
+    blog = Blog.find(params[:id])
+    blog.destroy
+    # なんでdestroyするときに[blog_params]使わないの？
+    # ==＞ストロングパラメータはフォームを使う際に、モデルを渡す時の”チェック係”のようなもの
+    # デストロイ時はモデルをフォームに渡したりしないので(blog_params)のようなストロングパラメータを使う必要がない
+    # (params[:id])はストロングパラメータとは関係ない。
+    redirect_to blogs_path
+  end
 
 end
 

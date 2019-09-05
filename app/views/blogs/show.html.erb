@@ -47,7 +47,9 @@
                 <%= link_to "編集", edit_blog_path(@blog) %>
                 <%# pathの指定に””は要らない。 %>
                 <%# editアクションのインスタンス変数を渡す %>
-                <a href="#">削除</a>
+                <%= link_to "削除", blog_path(@blog), method: :delete %>
+                <%# 並び順は「link_to "文字", url/path, hash method: :HTTPメソッド名（destroy"じゃなくて"delete）」 %>
+                <%# blogs_pathの引数はなんで(@blog)なのか→→→destroyアクションのリダイレクト先がshowアクションだから！showアクションの変数名は「@blog」のため %>
             </div>
       </div>
       <div class="author-case clearfix">
