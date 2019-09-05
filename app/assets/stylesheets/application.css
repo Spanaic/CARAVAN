@@ -233,6 +233,15 @@
   .blog-box-content {
     margin: 15px 5px 20px 0;
   }
+  .single-category {
+    display: inline-block;
+    padding: 5px 8px;
+    background-color: #acabab;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
   .single-image {
     width: 100%;
   }

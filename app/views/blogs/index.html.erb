@@ -45,12 +45,10 @@
                 <%# blog.titleやblog.created_atなどのblog部分は.each構文のブロック変数から抜いてきている。 %>
                 <%# @blogsでdbから全てのデータを引っ張ってきて、.eachで順番にレコードをスライスして処理を実行している %>
                 <%# 表示されているblogにはそれぞれidが割り振られているため、blog_path(blog.id)を(blog)と省略しても問題ない %>
-                <%# link_toのあとのタイトルはどこから来てるの？ タイトルのリンク先はshowアクション（まだ未記載だから意味不明なの？）idは不要？%>
                 <%#　現状では詳細ページの表示は未実装のため（view.htmlを書いていないため）初期値のまま %>
                 <p><%= blog.body %></p>
                 <p class="blog-date"><%= blog.created_at %></p>
                 <span class="category"><%= blog.category %></span>
-                <%# blog.〇〇の”blog”はモデル名.カラム名で呼び出せる・・・それともモデル名ではなくeach文のブロック変数からとってる？ %>
             </section>
             </div>
         <% end %>
