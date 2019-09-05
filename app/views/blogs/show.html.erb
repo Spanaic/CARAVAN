@@ -44,7 +44,9 @@
                 <section class="single-text">
                     <p><%= @blog.body %></p>
                 </section>
-                <%= link_to "編集", "edit_blog_path(blog.id)" %>
+                <%= link_to "編集", edit_blog_path(@blog) %>
+                <%# pathの指定に””は要らない。 %>
+                <%# editアクションのインスタンス変数を渡す %>
                 <a href="#">削除</a>
             </div>
       </div>
